@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+    --green: #4c5649ff;
+    --white: #ffffff;
+    --greenO: rgba(76, 86, 73, 0.666);
+    --bgWhite1: rgba(255, 255, 255, 0.429);
+    --bgWhite2: rgba(255, 255, 255, 0.78);
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+}
+  
+form input,
+form button {
+    font-size: large;
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+}
+  
+form input:focus,
+form button:focus {
+    outline-color: var(--greenO);
+}
+  
+form button {
+    background-color: var(--bgWhite2);
+}
+  
+form input:hover,
+form button:hover {
+    background-color: var(--greenO);
+    cursor: pointer;
+}
+
+.main-container {
+    height: 80vh;
+    width: auto;
+
+}
+
+.main-container .container1 {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    flex: 0 0 auto;
+}
+
+.buttons ul {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons li {
+    text-decoration: none;
+    padding: none;
+    list-style-type: none;
+}
+
+.buttons button {
+    border: 1px solid var(--greenO);
+    background-color: var(--bgWhite2);
+    border-radius: 10px;
+    height: 60px;
+    width: 60px;
+    font-family: 'Vollkorn', serif;
+    color: var(--green);
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button:hover {
+    background-color: var(--greenO);
+    cursor: pointer;
+}
+
+.buttons button img {
+    width: 20px;
+    height: 20px;
+}
+
+.container1 h1 {
+    color: var(--green);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container1 p {
+    font-family: 'Vollkorn', serif;
+    color: var(--greenO);
+    font-size: 15px;
+}
+
+.container2 {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+
+    height: 70%;
+
+    overflow: scroll;
+    flex: 1;
+}
+
+.container2 table {
+    width: 100%;
+    min-width: 1000px;
+}
+
+.container2 td {
+    align-items: center;
+}
+
+.container2 h2 {
+    color: var(--green);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+}
+
+.container2 th {
+    color: var(--green);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+}
+
+.container2 td {
+    color: var(--greenO);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+
+.container2 .attendanceData {
+    text-align: center;
+}
+
+.container2 .late {
+    color: rgb(255, 102, 102);
+}
+
+hr {
+    border: none; /* Remove the default border */
+    height: 2px; /* Set the height of the line */
+    background-color: #333; /* Set the background color */
+    margin: auto; /* Add some vertical spacing and center horizontally */
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+
+  
+@media (max-width: 768px) {
+
+    .main-container .container1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+}

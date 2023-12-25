@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+    --green: #4c5649ff;
+    --white: #ffffff;
+    --greenO: rgba(76, 86, 73, 0.666);
+    --bgWhite1: rgba(255, 255, 255, 0.429);
+    --bgWhite2: rgba(255, 255, 255, 0.78);
+}
+
+.main-container {
+    width: 100%;
+    min-width: 100px;
+}
+
+.main-container .about-container {
+    min-height: 40vh;
+    max-height: auto;
+    width: auto;
+
+    padding: 40px;
+}
+
+.about-container h1 {
+    color: var(--green);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-container p {
+    color: var(--greenO);
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    text-indent: 50px;
+
+    margin: 10px;
+}
+
+.about-container a {
+    color: var(--green);
+}
+
+.about-container a:hover {
+    color: var(--greenO);
+}
+
+.about-container strong {
+    color: var(--green);
+}
+
+.main-container .contacts-container {
+    min-width: 800px;
+    width: auto;
+
+}
+
+.main-container .contacts-container ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border: solid black 2px;
+
+    width: auto;
+
+}
+
+.main-container .contacts-container ul li {
+    min-height: 350px;
+    height: auto;
+    max-width: 300px;
+    width: 100%;
+    min-width: 100px;
+    align-items: center;
+    border: solid black 2px;
+
+}
+
+.blank {
+    background-color: var(--bgWhite1);
+    width: auto;
+    height: 50px;
+}
+
+.contacts-container li .cover-photo{
+    background-color: var(--bgWhite1);
+    height: calc(150px/2);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cover-photo img {
+    width: 150px;
+    min-height: 150px;
+    max-height: auto;
+    border-radius: 100%;
+}
+
+.cover-photo h2 {
+    color: var(--green);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+}
+
+.cover-photo p {
+    color: var(--greenO);
+    font-family: 'Vollkorn', serif;
+    font-size: 15px;
+}
+
+.cover-photo .icons {
+    display: flex;
+    gap: 30px;
+}
+
+.cover-photo .icons i{
+    color: var(--green);
+}
+
+.cover-photo .icons i:hover{
+    color: var(--greenO);
+}
+
+h2 {
+    text-align: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .main-container .contacts-container ul {
+        flex-direction: column;
+    }
+
+}

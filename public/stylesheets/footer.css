@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+    --green: #4c5649ff;
+    --white: #ffffff;
+    --greenO: rgba(76, 86, 73, 0.666);
+    --bgWhite1: rgba(255, 255, 255, 0.429);
+    --bgWhite2: rgba(255, 255, 255, 0.78);
+}
+
+#disclaimer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--green);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#disclaimer a {
+    color: white;
+}
+
+#disclaimer a:hover {
+    color: var(--greenO);
+}
+
+.footer {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Vollkorn', serif;
+
+    height: 50px;
+    padding-top: 5px;
+    color: var(--bgWhite2);
+    font-family: 'Vollkorn', serif;
+    font-size: 15px;
+
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: bolder;
+    margin: 0;
+}
+
+.footer #vertical-hr {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    width: 2px;
+    height: 100%;
+    border: none;
+    margin: 0 10px;
+}

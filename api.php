@@ -53,6 +53,7 @@ function isStudentInDatabase($id)
 }
 
 
+// Function to add a new student record to the attendance table
 function attendance($id)
 {
     global $connect;

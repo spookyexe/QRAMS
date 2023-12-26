@@ -6,9 +6,7 @@
 }
   
 body {
-  background-color: black;
-  background-image: url('../assets/bg-image.jpg');
-  background-repeat: no-repeat;
+  background-color: rgb(244, 244, 244);
 
   margin-left: 10vw;
   margin-right: 10vw;

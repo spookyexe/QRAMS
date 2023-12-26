@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 :root {
-    --green: #4c5649ff;
-    --white: #ffffff;
-    --greenO: rgba(76, 86, 73, 0.666);
+    --green: rgb(5, 5, 5);
+    --white: #777777;
+    --greenO: rgba(0, 0, 0, 0.666);
     --bgWhite1: rgba(255, 255, 255, 0.429);
     --bgWhite2: rgba(255, 255, 255, 0.78);
 }

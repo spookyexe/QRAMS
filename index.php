@@ -33,7 +33,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
     function renderStudentTable($students, $connect)
     {
         $html = '<table>';
-        $html .= '<tr><th>Name</th><th>Morning Time In</th><th>Morning Time Out</th><th>Afternoon Time In</th><th>Afternoon Time Out</th></tr>';
+        $html .= '<tr><th>Name</th><th>Morning In</th><th>Morning Out</th><th>Afternoon In</th><th>Afternoon Out</th></tr>';
         foreach ($students as $student) {
             $html .= '<tr>';
             $html .= '<td>' . htmlspecialchars($student['full_name']) . '</td>';

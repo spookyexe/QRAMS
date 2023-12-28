@@ -27,6 +27,7 @@ $emailValue = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <link rel="stylesheet" href="public/stylesheets/footer.css">
     <link rel="stylesheet" href="public/stylesheets/nav.css">
     <link rel="stylesheet" href="public/stylesheets/template.css">
+    <link rel="stylesheet" href="public/stylesheets/glass.css">
 
 </head>
 
@@ -50,16 +51,24 @@ $emailValue = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
         </div>
     </nav>
 
-    <div class="main-container">
-        <img src="public/assets/qrams.svg" alt="">
-        <form action="auth.php" method="post">
-            <div role="alert">
-                <p id="alert"><?= $error ?></p>
+    <div class="main-container glass">
+        <div class="image-container"></div>
+
+        <div class="login-container">
+            <div class="header">
+                <h1>QRAMS</h1>
+                <p>QR-CODE ATTENDANCE MONITORING SYSTEM</p>
             </div>
-            <input type="email" name="email" value="<?= $emailValue ?>" aria-describedby="emailHelp">
-            <input type="password" name="password">
-            <button type="submit">LOGIN</button>
-        </form>
+            <form action="auth.php" method="post">
+                <div role="alert">
+                    <p id="alert"><?= $error ?></p>
+                </div>
+                <input placeholder="Email..." type="email" name="email" value="<?= $emailValue ?>" aria-describedby="emailHelp">
+                <input placeholder="Password..." type="password" name="password">
+                <button type="submit">LOGIN</button>
+            </form>
+            <a id="forgot" href="">Forgot Password</a>
+        </div>
     </div>
 
     <div class="footer">
@@ -69,7 +78,7 @@ $emailValue = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
 
     </div>
 
-    <p id="disclaimer">In Partial fulfillment Of the requirements for the Strand Science, Technology, Engineering, Mathematics. <a href="about.php">Learn more</a></p>
+    <p id="disclaimer">In Partial Fulfillment of the Requirements for the Strand: Science, Technology, Engineering, Mathematics (STEM). <a href="about.php">Learn more</a></p>
 </body>
 
 </html>

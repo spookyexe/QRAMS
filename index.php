@@ -11,23 +11,25 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Function to generate the greeting
     function getGreeting()
     {
         date_default_timezone_set("Asia/Manila");
         $today = date("F j, Y | g:i A");
         $hour = date('H');
-        if ($hour >= 17 && $hour < 5) {
+
+        if ($hour >= 17 || $hour < 5) {
             $dayTerm = "Evening";
         } elseif ($hour >= 12) {
             $dayTerm = "Afternoon";
         } else {
             $dayTerm = "Morning";
         }
+
         $name = $_SESSION['user_full_name'];
 
         return "<h1>Good $dayTerm, $name</h1><p>$today</p>";
     }
+
 
     // Function to render a student table
     function renderStudentTable($students, $connect)
@@ -109,14 +111,13 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
             <hr>
             <div class="container2">
                 <div class="male-table">
-                    <h2>Male Students</h2>
                     <?= renderStudentTable($maleStudents, $connect) ?>
                 </div>
                 <div class="female-table">
-                    <h2>Female Students</h2>
                     <?= renderStudentTable($femaleStudents, $connect) ?>
                 </div>
             </div>
+            <hr>
         </div>
         <div class="footer">
             <img src="public/assets/gg.png" alt="gian.gg logo">

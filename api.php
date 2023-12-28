@@ -58,8 +58,8 @@ function attendance($id)
 {
     global $connect;
 
-    $currentTime = date("H:i:s");
-    // $currentTime = "09:40:00";
+    // $currentTime = date("H:i:s");
+    $currentTime = "13:10:00";
 
 
     if (isStudentInDatabase($id) === false) {

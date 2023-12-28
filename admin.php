@@ -43,11 +43,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
         }
     }
 
-
-    if (isset($_POST['archiveButton'])) {
-        arhiveAttendance($connect);
-    }
-
     function searchAttendance($conn)
     {
         // Check if search input is set
@@ -131,6 +126,12 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                     <input type="submit" name="archiveButton" value="ARCHIVE" />
                 </form>
+
+                <?php
+                if (isset($_POST['archiveButton'])) {
+                    arhiveAttendance($connect);
+                }
+                ?>
             </div>
 
             <div class="container2">

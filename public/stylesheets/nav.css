@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 :root {
-    --green: #4c5649ff;
-    --white: #ffffff;
-    --greenO: rgba(76, 86, 73, 0.666);
-    --bgWhite1: rgba(255, 255, 255, 0.429);
-    --bgWhite2: rgba(255, 255, 255, 0.78);
+    --black: rgb(27, 27, 27);
+    --white: #f3f3f3;
+    --text: rgb(47, 47, 47);
+    --textO: rgba(47, 47, 47, 0.666);
+    --paleblue: #ADD8E6;
+    --paleblueO: #6495a6;
+    --error: rgb(255, 113, 113);
+    --bgGrey: rgb(222, 222, 222);
 }
 
 .navbar {
@@ -14,13 +17,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #000000;
+    color: var(--black);
     padding: 10px 20px;
 
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 25px;
 
     width: 100%;
+
+    gap: 10px;
 }
 
 .navbar-left {
@@ -36,7 +41,7 @@
 
 .school-name {
     font-weight: bold;
-    color: black;
+    color: var(--black);
 }
 
 .school-address {
@@ -58,15 +63,16 @@
 
 .navbar-right a {
     text-decoration: none;
-    color: var(--green);
+    color: var(--black);
     transition: color 0.3s;
     border-radius: 20px;
-    background-color: var(--bgWhite2);
+    background-color: var(--paleblue);
     padding: 10px 20px;
+
 }
 
 .navbar-right a:hover {
-    background-color: var(--greenO); /* Change color on hover */
+    background-color: var(--paleblueO); /* Change color on hover */
 }
 
 
@@ -78,6 +84,7 @@
 
     .navbar-left {
         margin-bottom: 10px;
+        text-align: center;
     }
 
     .navbar-right ul {

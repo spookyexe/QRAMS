@@ -35,7 +35,7 @@
         </div>
         <div class="navbar-right">
             <ul>
-                <li><a href="index.php">GO BACK</a></li>
+                <li><a href="index.php">BACK</a></li>
             </ul>
         </div>
     </nav>
@@ -55,70 +55,40 @@
             <hr>
 
         </div>
-        <div class="contacts-container">
+        <div class="contact-container glass">
+            <h1 id="team-title">THE TEAM</h1>
             <ul>
-                <li class="glass">
-                    <div class="blank"></div>
-                    <div class="cover-photo">
-                        <img src="public/assets/No Profile Picture.svg" alt="">
-
-                        <h2>Mharniel Jay T. Torres</h2>
+                <li>
+                    <img src="public/assets/No Profile Picture.svg" alt="">
+                    <div class="contact-info">
+                        <h1>MHARNIEL JAY T. TORRES</h1>
                         <p>RESEARCHER</p>
-
-                        <div class="icons">
-                            <a href="mailto:mharnieljaytorres@gmail.com?subject=HTML%20link" target="_blank">
-                                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://web.facebook.com/mharnieljay.torres.7" target="_blank">
-                                <i class=" fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-
-                            </a>
-
-                        </div>
-
+                    </div>
+                    <div class="contact-links">
+                        <a href=""><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </li>
-                <li class="glass">
-                    <div class="blank"></div>
-                    <div class="cover-photo">
-                        <img src="public/assets/No Profile Picture.svg" alt="">
-
-                        <h2>Geri Gian C. Epanto</h2>
-                        <p>RESEARCHER</p>
-
-                        <div class="icons">
-                            <a href="mailto:epanto.gg@gmail.com?subject=HTML%20link" target="_blank">
-                                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://web.facebook.com/epanto.gg" target="_blank">
-                                <i class=" fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-
-                            </a>
-
-                        </div>
-
+                <li id="lead-researcher">
+                    <img src="public/assets/No Profile Picture.svg" alt="">
+                    <div class="contact-info">
+                        <h1>GERI GIAN C. EPANTO</h1>
+                        <p>LEAD RESEARCHER</p>
+                    </div>
+                    <div class="contact-links">
+                        <a href=""><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </li>
-                <li class="glass">
-                    <div class="blank"></div>
-                    <div class="cover-photo">
-                        <img src="public/assets/No Profile Picture.svg" alt="">
-
-                        <h2>Abigail Ruzel S. Balajula</h2>
+                <li>
+                    <img src="public/assets/No Profile Picture.svg" alt="">
+                    <div class="contact-info">
+                        <h1>ABIGAIL RUZEL S. BALAJULA</h1>
                         <p>RESEARCHER</p>
-
-                        <div class="icons">
-                            <a href="mailto:abigailruzelbalajula@gmail.com?subject=HTML%20link" target="_blank">
-                                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                            </a>
-
-                            <a href="https://web.facebook.com/abigailruzel.salvacionbalajula" target="_blank">
-                                <i class=" fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-
-                            </a>
-
-                        </div>
-
+                    </div>
+                    <div class="contact-links">
+                        <a href=""><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </li>
             </ul>
@@ -131,7 +101,7 @@
 
     </div>
 
-    <p id="disclaimer">In Partial fulfillment Of the requirements for the Strand Science, Technology, Engineering, Mathematics. <a href="about.php">Learn more</a></p>
+    <p id="disclaimer">In Partial Fulfillment of the Requirements for the Strand: Science, Technology, Engineering, Mathematics (STEM). <a href="about.php">Learn more</a></p>
 </body>
 
 </html>

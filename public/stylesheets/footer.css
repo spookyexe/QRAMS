@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 :root {
-    --green: rgb(5, 5, 5);
-    --white: #777777;
-    --greenO: rgba(0, 0, 0, 0.666);
-    --bgWhite1: rgba(255, 255, 255, 0.429);
-    --bgWhite2: rgba(255, 255, 255, 0.78);
+    --black: rgb(27, 27, 27);
+    --white: #f3f3f3;
+    --text: rgb(47, 47, 47);
+    --textO: rgba(47, 47, 47, 0.666);
+    --paleblue: #ADD8E6;
+    --paleblueO: #6495a6;
+    --error: rgb(255, 113, 113);
+    --bgGrey: rgb(222, 222, 222);
 }
 
 #disclaimer {
@@ -14,18 +17,21 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--green);
-    color: white;
+    background-color: var(--error);
+    color: var(--black);
     text-align: center;
     padding: 10px;
+
+    font-size: 20px;
 }
 
 #disclaimer a {
-    color: white;
+    color: var(--black);
+    font-size: 20px;
 }
 
 #disclaimer a:hover {
-    color: var(--greenO);
+    color: var(--textO);
 }
 
 .footer {
@@ -38,7 +44,6 @@
 
     height: 50px;
     padding-top: 5px;
-    color: var(--bgWhite2);
     font-family: 'Vollkorn', serif;
     font-size: 15px;
 
@@ -52,7 +57,6 @@
 }
 
 .footer p {
-    color: rgba(0, 0, 0, 0.9);
     font-weight: bolder;
     margin: 0;
 }
@@ -64,4 +68,14 @@
     height: 100%;
     border: none;
     margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    #disclaimer {
+        font-size: 12px;
+    }
+    
+    #disclaimer a {
+        font-size: 12px;
+    }
 }

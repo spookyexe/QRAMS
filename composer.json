@@ -1,0 +1,12 @@
+{
+    "name": "your-username/your-project",
+    "description": "Description of your project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.18"
+    },
+    "autoload": {
+        "psr-4": {
+            "YourNamespace\\": "src/"
+        }
+    }
+}

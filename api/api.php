@@ -1,6 +1,6 @@
 <?php
 
-include('db_conn.php');
+include '../config/db_conn.php';
 
 date_default_timezone_set('Asia/Manila');
 
@@ -58,8 +58,8 @@ function attendance($id)
 {
     global $connect;
 
-    // $currentTime = date("H:i:s");
-    $currentTime = "13:10:00";
+    $currentTime = date("H:i:s");
+    // $currentTime = "06:40:00";
 
 
     if (isStudentInDatabase($id) === false) {

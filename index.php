@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_conn.php';
+include 'config/db_conn.php';
 
 if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
     // Function to get students from database by gender
@@ -75,13 +75,13 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>QRAMS | <?= $_SESSION['user_gradeLevel'] ?> <?= strtoupper($_SESSION['user_section']) ?></title>
 
-        <link rel="icon" type="image/x-icon" href="public/assets/icon.png">
+        <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
 
-        <link rel="stylesheet" href="public/stylesheets/index.css">
-        <link rel="stylesheet" href="public/stylesheets/footer.css">
-        <link rel="stylesheet" href="public/stylesheets/nav.css">
-        <link rel="stylesheet" href="public/stylesheets/glass.css">
-        <link rel="stylesheet" href="public/stylesheets/template.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/nav.css">
+        <link rel="stylesheet" href="assets/css/glass.css">
+        <link rel="stylesheet" href="assets/css/template.css">
 
     </head>
 
@@ -92,7 +92,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
             </div>
             <div class="navbar-right">
                 <ul>
-                    <li><a href="logout.php">LOGOUT</a></li>
+                    <li><a href="scripts/logout.php">LOGOUT</a></li>
                 </ul>
             </div>
         </nav>
@@ -104,7 +104,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
                 <div class="buttons">
                     <ul>
                         <li><button onclick="">SF2</button></li>
-                        <li><button onclick="refreshPage()"><img src="public/assets/refresh.svg" alt=""></button></li>
+                        <li><button onclick="refreshPage()"><img src="assets/images/refresh.svg" alt=""></button></li>
                     </ul>
                 </div>
             </div>
@@ -120,13 +120,13 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
             <hr>
         </div>
         <div class="footer">
-            <img src="public/assets/gg.png" alt="gian.gg logo">
+            <img src="assets/images/gg.png" alt="gian.gg logo">
             <hr id="vertical-hr">
             <p>© GIAN EPANTO, 2023</p>
 
         </div>
 
-        <p id="disclaimer">In Partial fulfillment Of the requirements for the Strand Science, Technology, Engineering, Mathematics. <a href="about.php">Learn more</a></p>
+        <p id="disclaimer">In Partial fulfillment Of the requirements for the Strand Science, Technology, Engineering, Mathematics. <a href="pages/about.php">Learn more</a></p>
         <script>
             function refreshPage() {
                 location.reload();
@@ -137,6 +137,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
     </html>
 <?php
 } else {
-    header("Location: login.php");
+    header("Location: pages/login.php");
 }
 ?>

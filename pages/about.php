@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRAMS | ABOUT</title>
-    <link rel="icon" type="image/x-icon" href="public/assets/icon.png">
 
-    <link rel="stylesheet" href="public/stylesheets/about.css">
-    <link rel="stylesheet" href="public/stylesheets/footer.css">
-    <link rel="stylesheet" href="public/stylesheets/nav.css">
-    <link rel="stylesheet" href="public/stylesheets/glass.css">
-    <link rel="stylesheet" href="public/stylesheets/template.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/icon.png">
+
+    <link rel="stylesheet" href="../assets/css/about.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/glass.css">
+    <link rel="stylesheet" href="../assets/css/template.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +24,7 @@
     <nav class="navbar">
         <div class="navbar-left">
             <div class="logo">
-                <a href="https://web.facebook.com/pagsci" target="_blank"><img src="public/assets/PAGSCI.png" alt="pagsci logo"></a>
+                <a href="https://web.facebook.com/pagsci" target="_blank"><img src="../assets/images/PAGSCI.png" alt="pagsci logo"></a>
 
             </div>
             <div class="school-name">
@@ -35,7 +36,7 @@
         </div>
         <div class="navbar-right">
             <ul>
-                <li><a href="index.php">BACK</a></li>
+                <li><a href="../index.php">BACK</a></li>
             </ul>
         </div>
     </nav>
@@ -59,7 +60,7 @@
             <h1 id="team-title">THE TEAM</h1>
             <ul>
                 <li>
-                    <img src="public/assets/No Profile Picture.svg" alt="">
+                    <img src="../assets/images/No Profile Picture.svg" alt="">
                     <div class="contact-info">
                         <h1>MHARNIEL JAY T. TORRES</h1>
                         <p>RESEARCHER</p>
@@ -70,7 +71,7 @@
                     </div>
                 </li>
                 <li id="lead-researcher">
-                    <img src="public/assets/No Profile Picture.svg" alt="">
+                    <img src="../assets/images/No Profile Picture.svg" alt="">
                     <div class="contact-info">
                         <h1>GERI GIAN C. EPANTO</h1>
                         <p>LEAD RESEARCHER</p>
@@ -81,7 +82,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="public/assets/No Profile Picture.svg" alt="">
+                    <img src="../assets/images/No Profile Picture.svg" alt="">
                     <div class="contact-info">
                         <h1>ABIGAIL RUZEL S. BALAJULA</h1>
                         <p>RESEARCHER</p>
@@ -95,7 +96,7 @@
         </div>
     </div>
     <div class="footer">
-        <img src="public/assets/gg.png" alt="gian.gg logo">
+        <img src="../assets/images/gg.png" alt="gian.gg logo">
         <hr id="vertical-hr">
         <p>© GIAN EPANTO, 2023</p>
 

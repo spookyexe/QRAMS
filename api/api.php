@@ -4,6 +4,15 @@ include '../config/db_conn.php';
 
 date_default_timezone_set('Asia/Manila');
 
+// Your API key
+$apiKey = '9ccb6fe7';
+
+// Check if the provided API key matches the expected key
+if (!isset($_GET['api_key']) || $_GET['api_key'] !== $apiKey) {
+    echo json_encode(array('error' => 'Invalid API key'));
+    exit;
+}
+
 function getDataById($id)
 {
     global $connect; // Assuming $connect is your PDO connection
@@ -58,49 +67,56 @@ function attendance($id)
 {
     global $connect;
 
-    $currentTime = date("H:i:s");
-    // $currentTime = "06:40:00";
+    // $currentTime = date("H:i:s");
+    $currentTime = "10:31:00";
+    $currentTimestamp = strtotime($currentTime);
 
 
     if (isStudentInDatabase($id) === false) {
-        // Retrieve data for the student with the given ID
-        $studentData = getDataById($id);
 
-        // Check if data is retrieved successfully
-        if (!$studentData || !is_array($studentData)) {
-            return array('error' => 'Unable to retrieve student data');
-        }
+        if ($currentTimestamp >= strtotime("05:00:00") && $currentTimestamp <= strtotime("10:30:00")) {
+            $columnName = "morning_out";
 
-        // Extract relevant data
+            // Retrieve data for the student with the given ID
+            $studentData = getDataById($id);
 
-        $gradeLevel = $studentData["grade_level"];
-        $section = $studentData["section"];
-        $emptyTime = "00:00:00";
+            // Check if data is retrieved successfully
+            if (!$studentData || !is_array($studentData)) {
+                return array('error' => 'Unable to retrieve student data');
+            }
 
-        // Use prepared statement to insert data into the attendance table
-        $sql = "INSERT INTO attendance (id, gradeLevel, section, morning_in, morning_out, afternoon_in, afternoon_out) 
+            // Extract relevant data
+
+            $gradeLevel = $studentData["grade_level"];
+            $section = $studentData["section"];
+            $emptyTime = "00:00:00";
+
+            // Use prepared statement to insert data into the attendance table
+            $sql = "INSERT INTO attendance (id, gradeLevel, section, morning_in, morning_out, afternoon_in, afternoon_out) 
                 VALUES (:id, :gradeLevel, :section, :currentTime, :emptyTime, :emptyTime, :emptyTime)";
 
-        try {
-            $stmt = $connect->prepare($sql);
+            try {
+                $stmt = $connect->prepare($sql);
 
-            // Bind parameters
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-            $stmt->bindParam(':gradeLevel', $gradeLevel);
-            $stmt->bindParam(':section', $section);
-            $stmt->bindParam(':currentTime', $currentTime);
-            $stmt->bindParam(':emptyTime', $emptyTime);
+                // Bind parameters
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->bindParam(':gradeLevel', $gradeLevel);
+                $stmt->bindParam(':section', $section);
+                $stmt->bindParam(':currentTime', $currentTime);
+                $stmt->bindParam(':emptyTime', $emptyTime);
 
-            // Execute the prepared statement
-            $stmt->execute();
+                // Execute the prepared statement
+                $stmt->execute();
 
-            return array('message' => 'Student added to attendance table successfully');
-        } catch (PDOException $e) {
-            // Handle any errors that occurred during the query
-            return array('error' => 'Query failed: ' . $e->getMessage());
+                return array('message' => 'Student added to attendance table successfully');
+            } catch (PDOException $e) {
+                // Handle any errors that occurred during the query
+                return array('error' => 'Query failed: ' . $e->getMessage());
+            }
+        } else {
+            return array('error' => "Current Time is outside of Attendance Monitoring Time.");
         }
     } else {
-        $currentTimestamp = strtotime($currentTime);
 
         // Check if a record with the same timestamp and non-zero column value already exists
         $checkDuplicateSql = "SELECT id FROM attendance WHERE id = :id AND (

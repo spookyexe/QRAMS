@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_conn.php';
+include '../config/db_conn.php';
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
 
@@ -8,9 +8,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     if (empty($email)) {
-        header("Location: login.php?error=Email is Required.");
+        header("Location: ../pages/login.php?error=Email is Required.");
     } else if (empty($password)) {
-        header("Location: login.php?error=Password is Required.&email=$email");
+        header("Location: ../pages/login.php?error=Password is Required.&email=$email");
     } else {
         $stmt = $connect->prepare("SELECT * FROM advisers WHERE email=?");
         $stmt->execute([$email]);
@@ -35,18 +35,18 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
                     // Check if the user is the admin
                     if ($email === 'admin@qrams.com') {
-                        header("Location: admin.php");
+                        header("Location: ../pages/admin.php");
                     } else {
-                        header("Location: index.php");
+                        header("Location: ../index.php");
                     }
                 } else {
-                    header("Location: login.php?error=Incorrect Email or Password.&email=$email");
+                    header("Location: ../pages/login.php?error=Incorrect Email or Password.&email=$email");
                 }
             } else {
-                header("Location: login.php?error=Incorrect Email or Password.&email=$email");
+                header("Location: ../pages/login.php?error=Incorrect Email or Password.&email=$email");
             }
         } else {
-            header("Location: login.php?error=Incorrect Email or Password.&email=$email");
+            header("Location: ../pages/login.php?error=Incorrect Email or Password.&email=$email");
         }
     }
 }

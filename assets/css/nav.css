@@ -31,12 +31,12 @@
 .navbar-left {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .logo img {
     max-width: 50px;
     height: auto;
-    margin-right: 10px;
 }
 
 .school-name {

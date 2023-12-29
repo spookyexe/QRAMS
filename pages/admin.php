@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_conn.php';
+include '../config/db_conn.php';
 
 if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
 
@@ -99,13 +99,13 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>QRAMS | ADMIN</title>
 
-        <link rel="icon" type="image/x-icon" href="public/assets/icon.png">
+        <link rel="icon" type="image/x-icon" href="../assets/images/icon.png">
 
-        <link rel="stylesheet" href="public/stylesheets/admin.css">
-        <link rel="stylesheet" href="public/stylesheets/footer.css">
-        <link rel="stylesheet" href="public/stylesheets/nav.css">
-        <link rel="stylesheet" href="public/stylesheets/glass.css">
-        <link rel="stylesheet" href="public/stylesheets/template.css">
+        <link rel="stylesheet" href="../assets/css/admin.css">
+        <link rel="stylesheet" href="../assets/css/footer.css">
+        <link rel="stylesheet" href="../assets/css/nav.css">
+        <link rel="stylesheet" href="../assets/css/glass.css">
+        <link rel="stylesheet" href="../assets/css/template.css">
     </head>
 
     <body>
@@ -115,7 +115,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
             </div>
             <div class="navbar-right">
                 <ul>
-                    <li><a href="logout.php">LOGOUT</a></li>
+                    <li><a href="../scripts/logout.php">LOGOUT</a></li>
                 </ul>
             </div>
         </nav>
@@ -160,7 +160,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
         </div>
 
         <div class="footer">
-            <img src="public/assets/icon.png" alt="gian.gg logo">
+            <img src="../assets/images/gg.png" alt="gian.gg logo">
             <hr id="vertical-hr">
             <p>© GIAN EPANTO, 2023</p>
 

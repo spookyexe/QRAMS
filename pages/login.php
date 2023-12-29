@@ -22,12 +22,14 @@ $emailValue = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRAMS | LOGIN</title>
-    <link rel="icon" type="image/x-icon" href="public/assets/icon.png">
-    <link rel="stylesheet" href="public/stylesheets/login.css">
-    <link rel="stylesheet" href="public/stylesheets/footer.css">
-    <link rel="stylesheet" href="public/stylesheets/nav.css">
-    <link rel="stylesheet" href="public/stylesheets/template.css">
-    <link rel="stylesheet" href="public/stylesheets/glass.css">
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/icon.png">
+
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/glass.css">
+    <link rel="stylesheet" href="../assets/css/template.css">
 
 </head>
 
@@ -35,7 +37,7 @@ $emailValue = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     <nav class="navbar">
         <div class="navbar-left">
             <div class="logo">
-                <a href="https://web.facebook.com/pagsci" target="_blank"><img src="public/assets/PAGSCI.png" alt="pagsci logo"></a>
+                <a href="https://web.facebook.com/pagsci" target="_blank"><img src="../assets/images/PAGSCI.png" alt="pagsci logo"></a>
             </div>
             <div class="school-name">
                 PAGADIAN CITY SCIENCE HIGH SCHOOL
@@ -59,7 +61,7 @@ $emailValue = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
                 <h1>QRAMS</h1>
                 <p>QR-CODE ATTENDANCE MONITORING SYSTEM</p>
             </div>
-            <form action="auth.php" method="post">
+            <form action="../scripts/auth.php" method="post">
                 <div role="alert">
                     <p id="alert"><?= $error ?></p>
                 </div>
@@ -72,7 +74,7 @@ $emailValue = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     </div>
 
     <div class="footer">
-        <img src="public/assets/gg.png" alt="gian.gg logo">
+        <img src="../assets/images/gg.png" alt="gian.gg logo">
         <hr id="vertical-hr">
         <p>© GIAN EPANTO, 2023</p>
 

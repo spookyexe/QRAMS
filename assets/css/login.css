@@ -24,7 +24,7 @@
 
 .image-container {
     background-color: var(--paleblue);
-    height: 40vh;
+    height: 50vh;
     width: 100%;
 
     border-radius: 30px;
@@ -82,7 +82,7 @@ form button[type="submit"] {
 }
   
 form button[type="submit"]:hover {
-    background-color: var(--paleblueDarker);
+    background-color: var(--paleblueO);
     cursor: pointer;
 }
 

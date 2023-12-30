@@ -68,7 +68,7 @@ function attendance($id)
     global $connect;
 
     // $currentTime = date("H:i:s");
-    $currentTime = "10:31:00";
+    $currentTime = "17:30:00";
     $currentTimestamp = strtotime($currentTime);
 
 
@@ -108,7 +108,7 @@ function attendance($id)
                 // Execute the prepared statement
                 $stmt->execute();
 
-                return array('message' => 'Student added to attendance table successfully');
+                return array('message' => 'Student added to attendance table successfully', 'current_time' => $currentTime);
             } catch (PDOException $e) {
                 // Handle any errors that occurred during the query
                 return array('error' => 'Query failed: ' . $e->getMessage());
@@ -136,13 +136,10 @@ function attendance($id)
             // No duplicate found, proceed with the update
             if ($currentTimestamp >= strtotime("10:31:00") && $currentTimestamp <= strtotime("12:30:00")) {
                 $columnName = "morning_out";
-                echo "10:31AM - 12:30PM";
             } elseif ($currentTimestamp >= strtotime("12:31:00") && $currentTimestamp <= strtotime("14:00:00")) {
                 $columnName = "afternoon_in";
-                echo "12:31PM - 02:00PM";
             } elseif ($currentTimestamp >= strtotime("14:01:00") && $currentTimestamp <= strtotime("18:00:00")) {
                 $columnName = "afternoon_out";
-                echo "02:01PM - 06:00PM";
             } else {
                 if ($currentTimestamp >= strtotime("05:00:00") && $currentTimestamp <= strtotime("10:30:00")) {
                     return array('error' => "Duplicate entry found");
@@ -169,7 +166,7 @@ function attendance($id)
                     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
                     $stmt->execute();
 
-                    return array('message' => "Column $columnName updated successfully");
+                    return array('message' => "Column $columnName updated successfully", 'current_time' => $currentTime);
                 } catch (PDOException $e) {
                     // Handle any errors that occurred during the query
                     return array('error' => 'Query failed: ' . $e->getMessage());
